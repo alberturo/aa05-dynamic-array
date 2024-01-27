@@ -58,16 +58,24 @@ class DynamicArray {
   }
 
   resize() {
-    let newArray = [];
-    if (this.length >= this.capacity) {
-      this.capacity = 2 * this.capacity;
+    this.capacity *= 2;
+    let newData = new Array(this.capacity);
+
+    for (let i = 0; i < this.length; i++){
+      newData[i] = this.data[i];
     }
 
-    for (let i = 0; i < this.capacity; i++){
-      newArray.push(this.data[i]);
-    }
+    this.data = newData;
+    // let newArray = [];
+    // if (this.length >= this.capacity) {
+    //   this.capacity = 2 * this.capacity;
+    // }
 
-    this.data = newArray;
+    // for (let i = 0; i < this.capacity; i++){
+    //   newArray.push(this.data[i]);
+    // }
+
+    // this.data = newArray;
   }
 }
 
