@@ -49,11 +49,25 @@ class DynamicArray {
   }
 
   indexOf(val) {
-    // Your c
+    for (let i = 0; i < this.length; i++){
+      if (this.data[i] === val){
+        return i;
+      }
+    }
+    return -1;
   }
 
   resize() {
-    // Your code here
+    let newArray = [];
+    if (this.length >= this.capacity) {
+      this.capacity = 2 * this.capacity;
+    }
+
+    for (let i = 0; i < this.capacity; i++){
+      newArray.push(this.data[i]);
+    }
+
+    this.data = newArray;
   }
 }
 
