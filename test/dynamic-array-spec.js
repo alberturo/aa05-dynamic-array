@@ -40,6 +40,8 @@ describe('Dynamic Array', function () {
 
   });
 
+
+
   it('can read the value at a given index', function () {
 
     expect(dynamicArr.read(0)).to.equal(undefined);
@@ -81,6 +83,7 @@ describe('Dynamic Array', function () {
     expect(dynamicArr.pop()).to.equal(3);
     expect(dynamicArr.length).to.equal(2);
 
+
     expect(dynamicArr.pop()).to.equal(2);
     expect(dynamicArr.length).to.equal(1);
 
@@ -91,6 +94,8 @@ describe('Dynamic Array', function () {
     expect(dynamicArr.length).to.equal(0);
 
   });
+
+
 
   it('can `unshift()` into the front of the array', function () {
 
